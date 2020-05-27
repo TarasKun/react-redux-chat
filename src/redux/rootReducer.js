@@ -1,9 +1,16 @@
-export function rootReducer(state, action) {
-if (action.type === ''){
-    return state
-}
+const initialState = {
+    fullName: 'Taras Kunyk'
+};
 
 
-    return state;
+export default (state = initialState, action) => {
+    switch (action.type) {
+        case '1234':
+            return {
+                ...state,
+                name: action.payload,
+            };
 
+        default: return state;
+    }
 }
