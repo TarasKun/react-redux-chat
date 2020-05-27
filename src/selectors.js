@@ -1,0 +1,1 @@
+export const getFullName = state => state.fullName;
