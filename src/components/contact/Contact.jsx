@@ -1,24 +1,26 @@
-import React from "react";
+import React, {Component} from "react";
 import './Contact.scss';
 
+// class Contact extends Component{
+// componentDidMount() {
+// }
+//
+//
+//     render() {
+//         return (
+//             <div>
+//
+//             </div>
+//         )
+//     }
+// }
 
-const Contact = () => {
+const Contact = (props) => {
+    console.log(props);
 
-    return <div>
+    return (<div>
 
-    </div>
+    </div>)
 }
 
-// contacts: [{
-//     fullName: 'Taras Kunyk',
-//     messagesBy: [{
-//         date: '2020/05/18',
-//         time: '15:39:12',
-//         value: 'Hey, whats up?',
-//     }, {}, {}, {}],
-//     messagesTo: [{
-//         date: '2020/05/18',
-//         time: '15:40:20',
-//         value: 'Hey, im good, thx. What about you?',
-//     }]
-// }, {}, {}];
+export default Contact;

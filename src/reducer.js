@@ -13,7 +13,8 @@ const initialState = {
                 time: '22:28:51',
                 value: 'Hi, Josephina!'
             }]
-        }
+        },
+
     ]
 };
 

@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
-import AboutMe from "./AboutMe";
-import {getFullName} from '../../selectors';
+import Contact from "./Contact";
 import {setContactName} from '../../actions'
+import {getContacts} from "../../selectors";
 
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-        fullName: getFullName(state)
+        getContacts: getContacts(state)
     }
 };
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AboutMe)
+export default connect(mapStateToProps, mapDispatchToProps)(Contact)
