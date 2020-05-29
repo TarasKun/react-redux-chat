@@ -6,6 +6,9 @@
   top: 20%;
   border: solid 1px #e8e8e8;
 }
+.contact-container--div {
+  padding: 13%;
+}
 
 p {
   position: absolute;

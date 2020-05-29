@@ -4,7 +4,10 @@
   height: 80%;
   position: absolute;
   top: 20%;
-  border: solid 1px #e8e8e8
+  border: solid 1px #e8e8e8;
+  &--div{
+    padding: 13%;
+  }
 }
 
 p {

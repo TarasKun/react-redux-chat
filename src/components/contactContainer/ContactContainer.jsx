@@ -1,16 +1,17 @@
 import React from "react";
 import './ContactContainer.scss';
-import Contact from "../contact/Contact";
+import ContactRow from "../contactRow/ContactRow";
 
-const ContactContainer = ({contacts}) =>{
-    console.log(contacts);
+const ContactContainer = ({contacts}) => {
     return <div className={'contact-container'}>
         <p>Chats</p>
-       <ul>
-           {
-               contacts.map(contact=><Contact contact = {contact}/>)
-           }
-       </ul>
+        <div className={'contact-container--div'}>
+            {
+                contacts.map(contact => <ContactRow
+                    contact={contact}
+                />)
+            }
+        </div>
     </div>
 }
 
