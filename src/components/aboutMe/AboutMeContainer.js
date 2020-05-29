@@ -4,7 +4,6 @@ import {getFullName} from '../../selectors';
 import {setContactName} from '../../actions'
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         fullName: getFullName(state)
     }

@@ -2,6 +2,7 @@ const initialState = {
     fullName: 'Taras Kunyk',
     contacts: [
         {
+            id:0,
             fullName: 'Josephina',
             messagesFrom: [{
                 date: '27/05/2020',
@@ -15,7 +16,8 @@ const initialState = {
             }]
         },
 
-    ]
+    ],
+    currentContact: ''
 };
 
 
@@ -26,7 +28,13 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 contacts: [...state.contacts, action.contact]
             };
+        case 'SET_CONTACT_TO_HEADER_RENDER':
+            return {
+                ...state,
+                currentContact: action.id
+            }
 
-        default: return state;
+        default:
+            return state;
     }
 };

@@ -5,4 +5,11 @@ export const setContactName = contact => {
     }
 };
 
+export const setContactToHeaderRender = id => {
+    return{
+        type: 'SET_CONTACT_TO_HEADER_RENDER',
+        id
+    }
+}
+
 

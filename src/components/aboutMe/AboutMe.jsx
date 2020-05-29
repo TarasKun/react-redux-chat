@@ -5,6 +5,7 @@ import Input from "../input/Input";
 
 const contacts = [
     {
+        id: 1,
         fullName: 'Velazques',
         messagesFrom: [{
             date: '19/05/2020',
@@ -18,6 +19,7 @@ const contacts = [
         }]
     },
     {
+        id:2,
         fullName: 'Barrera',
         messagesFrom: [{
             date: '25/04/2020',
@@ -31,6 +33,7 @@ const contacts = [
         }]
     },
     {
+        id:3,
         fullName: 'Alice Freeman',
         messagesFrom: [{
             date: '21/05/2020',
@@ -47,10 +50,10 @@ const contacts = [
 
 
 class AboutMe extends Component {
+
     componentDidMount() {
         contacts.map(contact => this.props.setContactName(contact))
     };
-
 
     render() {
         return (
