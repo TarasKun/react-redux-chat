@@ -1,26 +1,13 @@
-import React, {Component} from "react";
+import React from "react";
 import './Contact.scss';
 
-// class Contact extends Component{
-// componentDidMount() {
-// }
-//
-//
-//     render() {
-//         return (
-//             <div>
-//
-//             </div>
-//         )
-//     }
-// }
+const Contact = ({contact}) => {
 
-const Contact = (props) => {
-    console.log(props);
-
-    return (<div>
-
-    </div>)
+    return (
+        <li>
+            {contact.fullName}
+        </li>
+    )
 }
 
 export default Contact;
