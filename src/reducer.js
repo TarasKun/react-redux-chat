@@ -4,14 +4,16 @@ const initialObjects = {
         {
             id: 0,
             fullName: 'Josephina',
-            messages: [
+            messages:  [
                 {
+                    messageToMe: true,
                     id: 1,
-                    date: '27/05/2020',
+                    date: '02/05/2020',
                     time: '22:27:51',
                     value: 'Hi, Taras!'
                 },
                 {
+                    messageToMe: false,
                     id: 2,
                     date: '27/05/2020',
                     time: '22:28:51',
@@ -24,14 +26,16 @@ const initialObjects = {
             fullName: 'Donald Trump',
             messages: [
                 {
+                    messageToMe: true,
                     id: 1,
-                    date: '27/05/2020',
+                    date: '23/03/2020',
                     time: '22:27:51',
                     value: 'How you doing?!'
                 },
                 {
+                    messageToMe: false,
                     id: 2,
-                    date: '27/05/2020',
+                    date: '05/05/2020',
                     time: '22:28:51',
                     value: 'Good!'
                 }
@@ -42,14 +46,16 @@ const initialObjects = {
             fullName: 'Elon Musk',
             messages: [
                 {
+                    messageToMe: true,
                     id: 1,
-                    date: '27/05/2020',
+                    date: '13/04/2020',
                     time: '22:27:51',
                     value: 'Do you want new Tesla?'
                 },
                 {
+                    messageToMe: false,
                     id: 2,
-                    date: '27/05/2020',
+                    date: '24/05/2020',
                     time: '22:28:51',
                     value: 'yeah, why not'
                 }
@@ -60,14 +66,16 @@ const initialObjects = {
             fullName: 'Michael',
             messages: [
                 {
+                    messageToMe: true,
                     id: 1,
-                    date: '27/05/2020',
+                    date: '15/01/2020',
                     time: '22:27:51',
                     value: 'how are you?'
                 },
                 {
+                    messageToMe: false,
                     id: 2,
-                    date: '27/05/2020',
+                    date: '23/05/2020',
                     time: '22:28:51',
                     value: 'perfect'
                 }
@@ -78,14 +86,16 @@ const initialObjects = {
             fullName: 'Bryan',
             messages: [
                 {
+                    messageToMe: true,
                     id: 1,
-                    date: '27/05/2020',
+                    date: '14/05/2020',
                     time: '22:27:51',
                     value: 'I am so tired'
                 },
                 {
+                    messageToMe: false,
                     id: 2,
-                    date: '27/05/2020',
+                    date: '15/05/2020',
                     time: '22:28:51',
                     value: 'okay'
                 }
@@ -95,7 +105,6 @@ const initialObjects = {
 }
 
 const initialState = initialObjects;
-
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {

@@ -1,0 +1,8 @@
+.chat-row{
+  &--from-me{
+      background: aquamarine;
+    }
+  &--to-me{
+    background: crimson;
+  }
+}

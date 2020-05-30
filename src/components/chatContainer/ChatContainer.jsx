@@ -3,12 +3,29 @@ import './ChatContainer.scss';
 import ChatHeader from "../chatHeader/ChatHeader";
 import SendMessage from "../sendMessage/SendMessage";
 import ChatMain from "../chatMain/ChatMain";
+import {connect} from "react-redux";
 
-const ChatContainer = () => {
+const ChatContainer = ({contacts, currentContact}) => {
+
+    const contactToRender = contacts.find(contact => contact.id === currentContact);
+
+
     return <div className={'chat-container'}>
-        <ChatHeader/>
-        <ChatMain/>
+        <ChatHeader
+            fullName={contactToRender && contactToRender.fullName}
+        />
+        <ChatMain
+            messages={contactToRender && contactToRender.messages}
+        />
         <SendMessage/>
     </div>
 }
-export default ChatContainer;
+
+const mapStateToProps = ({contacts, currentContact}) => {
+    return {
+        contacts: contacts,
+        currentContact: currentContact
+    }
+};
+
+export default connect(mapStateToProps)(ChatContainer)
