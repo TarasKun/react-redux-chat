@@ -12,4 +12,11 @@ export const setContactToHeaderRender = id => {
     }
 }
 
+export const updateMessagesHistory = obj => {
+    return {
+        type: 'SET_MESSAGE_TO_MESSAGE_HISTORY',
+        obj
+    }
+}
+
 

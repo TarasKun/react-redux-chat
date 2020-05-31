@@ -5,10 +5,10 @@ import SendMessage from "../sendMessage/SendMessage";
 import ChatMain from "../chatMain/ChatMain";
 import {connect} from "react-redux";
 
+
 const ChatContainer = ({contacts, currentContact}) => {
 
     const contactToRender = contacts.find(contact => contact.id === currentContact);
-
 
     return <div className={'chat-container'}>
         <ChatHeader
@@ -17,7 +17,9 @@ const ChatContainer = ({contacts, currentContact}) => {
         <ChatMain
             messages={contactToRender && contactToRender.messages}
         />
-        <SendMessage/>
+        <SendMessage
+            messages={contactToRender && contactToRender.messages}
+            contactToUpdate={contactToRender}/>
     </div>
 }
 

@@ -4,7 +4,7 @@ import ChatRow from "../chatRow/ChatRow";
 import {connect} from "react-redux";
 // proptipes
 // defaultprops
-const ChatMain = ({contacts, currentContact, messages = []}) =>
+const ChatMain = ({messages = []}) =>
 
     <div className={'chat-main'}>
         {

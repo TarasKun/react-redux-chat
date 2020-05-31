@@ -1,4 +1,4 @@
-const initialObjects = {
+const initialState = {
     fullName: 'Taras Kunyk',
     contacts: [
         {
@@ -8,15 +8,15 @@ const initialObjects = {
                 {
                     messageToMe: true,
                     id: 1,
-                    date: '02/05/2020',
-                    time: '22:27:51',
+                    date: '2/05/2020',
+                    time: '22:27',
                     value: 'Hi, Taras!'
                 },
                 {
                     messageToMe: false,
                     id: 2,
                     date: '27/05/2020',
-                    time: '22:28:51',
+                    time: '22:28',
                     value: 'Hi, Josephina!'
                 }
             ]
@@ -29,14 +29,14 @@ const initialObjects = {
                     messageToMe: true,
                     id: 1,
                     date: '23/03/2020',
-                    time: '22:27:51',
+                    time: '22:27',
                     value: 'How you doing?!'
                 },
                 {
                     messageToMe: false,
                     id: 2,
-                    date: '05/05/2020',
-                    time: '22:28:51',
+                    date: '5/05/2020',
+                    time: '22:28',
                     value: 'Good!'
                 }
             ]
@@ -49,14 +49,14 @@ const initialObjects = {
                     messageToMe: true,
                     id: 1,
                     date: '13/04/2020',
-                    time: '22:27:51',
+                    time: '22:27',
                     value: 'Do you want new Tesla?'
                 },
                 {
                     messageToMe: false,
                     id: 2,
                     date: '24/05/2020',
-                    time: '22:28:51',
+                    time: '22:28',
                     value: 'yeah, why not'
                 }
             ]
@@ -69,14 +69,14 @@ const initialObjects = {
                     messageToMe: true,
                     id: 1,
                     date: '15/01/2020',
-                    time: '22:27:51',
+                    time: '22:27',
                     value: 'how are you?'
                 },
                 {
                     messageToMe: false,
                     id: 2,
                     date: '23/05/2020',
-                    time: '22:28:51',
+                    time: '22:28',
                     value: 'perfect'
                 }
             ]
@@ -89,22 +89,20 @@ const initialObjects = {
                     messageToMe: true,
                     id: 1,
                     date: '14/05/2020',
-                    time: '22:27:51',
+                    time: '22:27',
                     value: 'I am so tired'
                 },
                 {
                     messageToMe: false,
                     id: 2,
                     date: '15/05/2020',
-                    time: '22:28:51',
+                    time: '22:28',
                     value: 'okay'
                 }
             ]
         }],
-        currentContact:''
-}
-
-const initialState = initialObjects;
+    currentContact:''
+};
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -118,8 +116,13 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 currentContact: action.id
             }
+        case 'SET_MESSAGE_TO_MESSAGE_HISTORY':
+            return {
+                ...state,
+                contacts: [...state.contacts.map(contact => contact.id !== action.obj.id ? contact  : action.obj)]
+            }
 
-        default:
+        default: 
             return state;
     }
 };
