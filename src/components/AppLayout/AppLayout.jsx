@@ -1,13 +1,11 @@
 import React from 'react';
-import AboutMeContainer from "../aboutMe/AboutMeContainer";
-import ContactContainer from "../contactContainer/Container";
 import ChatContainer from "../chatContainer/ChatContainer";
+import LeftBarContainer from "../leftBar/LeftBarContainer";
 
 
 const AppLayout = () => {
   return <div className={'chat'}>
-      <AboutMeContainer/>
-      <ContactContainer/>
+      <LeftBarContainer/>
       <ChatContainer/>
   </div>
 };

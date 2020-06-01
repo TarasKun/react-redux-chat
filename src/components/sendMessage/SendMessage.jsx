@@ -48,6 +48,7 @@ const SendMessage = ({messages = [], contactToUpdate}) => {
             time: currentTime,
             value: joke
         }
+        debugger;
         const objectToUpdate = {
             id: contactToUpdate.id,
             fullName: contactToUpdate.fullName,
