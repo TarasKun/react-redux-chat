@@ -4,10 +4,10 @@ import LeftBarContainer from "../leftBar/LeftBarContainer";
 
 
 const AppLayout = () => {
-  return <div className={'chat'}>
-      <LeftBarContainer/>
-      <ChatContainer/>
-  </div>
+    return <div className={'chat'}>
+        <LeftBarContainer/>
+        <ChatContainer/>
+    </div>
 };
 
 export default AppLayout;

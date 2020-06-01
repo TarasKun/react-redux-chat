@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import './AboutMe.scss';
 import Input from "../input/Input";
 
+
 class AboutMe extends Component {
 
     render() {

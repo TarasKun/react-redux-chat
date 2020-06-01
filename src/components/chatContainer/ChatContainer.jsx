@@ -6,8 +6,9 @@ import ChatMain from "../chatMain/ChatMain";
 import {connect} from "react-redux";
 
 
-const ChatContainer = ({contacts, currentContact}) => {
-
+const ChatContainer = ({contacts, currentContact=''}) => {
+    // console.log('contact: ' + contacts);
+    // console.log('currentContact: ' + currentContact);
     const contactToRender = contacts.find(contact => contact.id === currentContact);
 
     return <div className={'chat-container'}>
@@ -17,9 +18,14 @@ const ChatContainer = ({contacts, currentContact}) => {
         <ChatMain
             messages={contactToRender && contactToRender.messages}
         />
-        <SendMessage
-            messages={contactToRender && contactToRender.messages}
-            contactToUpdate={contactToRender}/>
+        {currentContact ?
+            <SendMessage
+                contactToUpdate={contactToRender}
+            className ={'--active'}/> :
+            <SendMessage
+                contactToUpdate={contactToRender}
+                className={'--stand-by'}
+        />}
     </div>
 }
 

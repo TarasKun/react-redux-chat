@@ -1,15 +1,22 @@
 import React from "react";
 import './Input.scss';
+import SearchIcon from '@material-ui/icons/Search';
 
-const Input = ({className, placeHolder, onChangeHandler}) => {
 
+const Input = ({className, placeHolder, onChangeHandler,searchIconClass}) => {
 
-    return <div>
+    return <div
+        className={className}>
+        <SearchIcon className={className + '--searchIcon'}/>
+        {/*<SendIcon className={className + '--sendIcon'}/>*/}
         <input type="input"
-               className={className}
+               className={className + '--input'}
                placeholder={placeHolder}
-               onChange={e => onChangeHandler(e.target.value)}
+
+
+            // onChange={e => onChangeHandler(e.target.value)}
         />
+
     </div>
 }
 

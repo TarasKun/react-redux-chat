@@ -5,7 +5,7 @@ import AboutMe from "../aboutMe/AboutMe";
 const LeftBar = ({contacts, fullName}) => {
     const [filteredContacts, setFilteredContacts] = useState(contacts);
     const getFilterContacts = inputValue => {
-        setFilteredContacts(contacts.filter(({fullName}) => fullName.includes(inputValue)));
+        setFilteredContacts(contacts.filter(({fullName}) => fullName.toLowerCase().includes(inputValue)));
     }
     return <div>
         <AboutMe

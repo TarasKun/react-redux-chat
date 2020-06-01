@@ -2,7 +2,7 @@ const initialState = {
     fullName: 'Taras Kunyk',
     contacts: [
         {
-            id: 0,
+            id: 1,
             fullName: 'Josephina',
             messages:  [
                 {
@@ -22,7 +22,7 @@ const initialState = {
             ]
         },
         {
-            id: 1,
+            id: 2,
             fullName: 'Donald Trump',
             messages: [
                 {
@@ -42,7 +42,7 @@ const initialState = {
             ]
         },
         {
-            id: 2,
+            id: 3,
             fullName: 'Elon Musk',
             messages: [
                 {
@@ -62,7 +62,7 @@ const initialState = {
             ]
         },
         {
-            id: 3,
+            id: 4,
             fullName: 'Michael',
             messages: [
                 {
@@ -82,7 +82,7 @@ const initialState = {
             ]
         },
         {
-            id: 4,
+            id: 5,
             fullName: 'Bryan',
             messages: [
                 {

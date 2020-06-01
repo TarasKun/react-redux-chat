@@ -1,7 +1,7 @@
 import React from "react";
 import './ChatRow.scss';
 
-const ChatRow = ({message, messageToMe, date,time}) => {
+const ChatRow = ({message, messageToMe, date, time}) => {
 
     return <div className={'chat-row'}>
         {
@@ -9,8 +9,6 @@ const ChatRow = ({message, messageToMe, date,time}) => {
                 <div className={'chat-row--to-me'}> {message}{date}{time}</div> :
                 <div className={'chat-row--from-me'}>{message}{date}{time}</div>
         }
-
-
     </div>
 }
 

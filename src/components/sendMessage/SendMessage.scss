@@ -6,3 +6,48 @@
   background: #f5f5f5;
   border: solid 1px #e8e8e8;
 }
+
+.sendMessage-input {
+  //&--searchIcon{
+  //  margin-top: 6px;
+  //  opacity: 0.3;
+  //}
+  &--stand-by{
+    display: none;
+  }
+  &--active{
+    justify-content: center;
+
+    &--searchIcon{
+      opacity: 0;
+    }
+    &--input{
+      text-decoration: none;
+      width: 90%;
+      height: 50px;
+      position: absolute;
+      top: 30%;
+      left: 7%;
+      border-radius: 20px;
+      border: solid 1px #e8e8e8;
+      font-size: 17px;
+    }
+  }
+}
+svg.MuiSvgIcon-root.aboutMe-input--sendIcon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+  display: none;
+}
+.sendIcon{
+  position: relative;
+  left: 93%;
+  top: 21px;
+  opacity: 0.3;
+  cursor: pointer;
+}

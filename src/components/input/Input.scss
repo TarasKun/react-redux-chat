@@ -7,15 +7,20 @@
   left: 3%;
   border-radius: 30px;
   background: #fafafa;
+  &--sendIcon{
+    display: none;
+  }
+  &--searchIcon{
+    margin-top: 6px;
+    opacity: 0.3;
+  }
+ &--input{
+   border: none;
+   width: 93%;
+   height: 100%;
+   position: absolute;
+   border-radius: 30px;
+   background: #fafafa;
+ }
 }
 
-.sendMessage-input {
-  width: 90%;
-  height: 50px;
-  position: absolute;
-  top: 30%;
-  left: 7%;
-  border-radius: 20px;
-  border: solid 1px #e8e8e8;
-  font-size: 17px;
-}
