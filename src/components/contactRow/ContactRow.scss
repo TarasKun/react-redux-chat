@@ -1,6 +1,13 @@
 .contact-row {
-  padding-top: 10%;
+  height: 20%;
+  padding-top: 5%;
   cursor: pointer;
   border-bottom: solid 1px #f1f1f1;
-  width: 100%;
+  display: flex;
+  &:hover {
+  background: deepskyblue;
+}
+  &:active{
+    background: blue;
+  }
 }

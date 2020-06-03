@@ -121,6 +121,11 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 contacts: [...state.contacts.map(contact => contact.id !== action.obj.id ? contact  : action.obj)]
             }
+        case 'SET_MESSAGE_FROM_API':
+            return {
+                ...state,
+                contacts: [...state.contacts.map(contact => contact.id !== action.obj.id ? contact  : action.obj)]
+            }
 
         default: 
             return state;

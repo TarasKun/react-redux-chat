@@ -1,8 +1,27 @@
+.chat-row-to-me {
+  display: flex;
+}
+
 .chat-row{
+  display: flex;
+  font-size: 20px;
+  justify-content: flex-end;
+
   &--from-me{
-      background: aquamarine;
-    }
-  &--to-me{
-    background: crimson;
+    background: #e0e0e0;
+    border-radius: 20px;
+    height: auto;
   }
+  &--to-me{
+    background: #3c4154;
+    border-radius: 20px;
+    color: white;
+    justify-content: right;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+
+  }
+}
+.date-time{
+  font-size: 12px;
 }

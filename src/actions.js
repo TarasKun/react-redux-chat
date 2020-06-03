@@ -19,4 +19,11 @@ export const updateMessagesHistory = obj => {
     }
 }
 
+export const updateMessagesHistoryWithApiResult = obj => {
+    return {
+        type: 'SET_MESSAGE_FROM_API',
+        obj
+    }
+}
+
 
