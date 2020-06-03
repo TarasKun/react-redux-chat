@@ -1,21 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './SendMessage.scss';
 import Input from "../input/Input";
-import {useDispatch, useSelector} from 'react-redux';
-import {updateMessagesHistory, updateMessagesHistoryWithApiResult} from '../../actions'
-import {getContacts} from "../../selectors";
+import {useDispatch} from 'react-redux';
+import {updateMessagesHistory} from '../../actions'
 import SendIcon from '@material-ui/icons/Send';
 
-const SendMessage = ({contactToUpdate = '', className, contacts }) => {
-    debugger;
-
+const SendMessage = ({contactToUpdate = '', className, contacts}) => {
     const dispatch = useDispatch();
     const date = new Date();
     const currentDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
     const currentTime = date.getHours() + ':' + date.getMinutes();
 
-    const ifEnter = (msg, willRender) => {
-        debugger;
+    const ifEnter = (msg) => {
+
         const contactToRender = contacts.find(contact => contact.id === contactToUpdate.id);
         const message = {
             messageToMe: false,
@@ -30,14 +27,11 @@ const SendMessage = ({contactToUpdate = '', className, contacts }) => {
             fullName: contactToRender.fullName,
             messages: [...contactToRender.messages, message]
         }
-
         dispatch(updateMessagesHistory(objectToUpdate));
     }
 
     const clickHandler = (e) => {
         e.keyCode === 13 && ifEnter(e.target.value, true);
-
-
     }
 
     return <div className={'send-message'}
@@ -51,8 +45,8 @@ const SendMessage = ({contactToUpdate = '', className, contacts }) => {
             />
         </div>
     </div>
-
 }
+
 export default SendMessage;
 
 

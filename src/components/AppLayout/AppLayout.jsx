@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatContainer from "../chatContainer/ChatContainer";
+import ChatContainer from "../chatContainer/ChatWrapper";
 import LeftBarContainer from "../leftBar/LeftBarContainer";
 
 

@@ -1,19 +1,16 @@
 import React, { Component } from "react";
 import './ChatMain.scss';
 import ChatRow from "../chatRow/ChatRow";
-import {useDispatch} from "react-redux";
+import {joke} from '../../ChuckNorrisClient'
+// async function joke(contacts,updateMessagesHistoryWithApiResult, contactToUpdate ) {
+//     debugger;
+//     await fetch('https://api.chucknorris.io/jokes/random')
+//         .then(response => response.json())
+//         .then(res => setApiResult(res.value, contacts, updateMessagesHistoryWithApiResult, contactToUpdate))
+//         .catch(e => console.log(e))
+// }
 
-async function joke(contacts,updateMessagesHistoryWithApiResult, contactToUpdate ) {
-    debugger;
-    await fetch('https://api.chucknorris.io/jokes/random')
-        .then(response => response.json())
-        .then(res => setApiResult(res.value, contacts, updateMessagesHistoryWithApiResult, contactToUpdate))
-        .catch(e => console.log(e))
-}
-
-const setApiResult = (msg, contacts, updateMessagesHistoryWithApiResult, contactToUpdate) => {
-    console.log(contacts);
-    debugger;
+export const setApiResult = (msg, contacts, updateMessagesHistoryWithApiResult, contactToUpdate) => {
     const date = new Date();
     const contactToRender = contacts.find(contact => contact.id === contactToUpdate.id);
     const currentDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
@@ -38,7 +35,6 @@ const setApiResult = (msg, contacts, updateMessagesHistoryWithApiResult, contact
 class ChatMain extends Component {
 
     componentDidUpdate(prevProps) {
-        debugger;
         if(prevProps.messages !== this.props.messages) {
             if(prevProps.messages !== undefined && prevProps.messages[prevProps.messages.length - 1].fromApi !== true) {
                 joke(this.props.contacts, this.props.updateMessagesHistoryWithApiResult, this.props.contactToUpdate);

@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import ChatMain from "./ChatMain";
-import { getContacts } from '../../selectors';
+import {getContacts} from '../../selectors';
 import {updateMessagesHistoryWithApiResult} from '../../actions';
 
 const mapStateToProps = state => {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(ChatMain)
+export default connect(mapStateToProps, mapDispatchToProps)(ChatMain)

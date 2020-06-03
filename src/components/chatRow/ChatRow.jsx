@@ -11,10 +11,13 @@ const ChatRow = ({message, messageToMe, date, time}) => {
                     <div className={'date-time'}>{date},      {time}</div>
                 </div>
                 :
-                <div className={'chat-row--from-me'}>
-                    <div>{message}</div>
-                    <div className={'date-time'}>{date},      {time}</div>
-                </div>
+
+                    <div>
+                        <div className={'chat-row--from-me'}>{message}</div>
+                        <div className={'date-time'}>{date},      {time}</div>
+                    </div>
+
+
 
         }
     </div>
