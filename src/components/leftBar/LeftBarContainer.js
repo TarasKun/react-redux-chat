@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import LeftBar from "./LeftBar";
-import {getFullName, getContacts} from '../../selectors';
+import {getFullName, getContacts, getCurrentContact} from '../../selectors';
 
 const mapStateToProps = (state) => {
     return {
         fullName: getFullName(state),
-        contacts: getContacts(state)
+        contacts: getContacts(state),
     }
 };
 

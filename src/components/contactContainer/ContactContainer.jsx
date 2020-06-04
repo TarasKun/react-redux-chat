@@ -5,7 +5,6 @@ import SetContactToHeader from "../contactRow/setContactToHeader";
 
 const ContactContainer = ({contacts}) => {
 
-
     return (
         <div className={'contact-container'}>
             <h3 className={'contact-container__title'}>Chats</h3>

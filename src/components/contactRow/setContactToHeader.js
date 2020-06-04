@@ -1,10 +1,12 @@
 import { connect } from "react-redux";
 import {setContactToHeaderRender} from '../../actions'
 import ContactRow from "./ContactRow";
+import {getContacts, getCurrentContact} from "../../selectors";
 
-const mapStateToProps = ({contacts}) => {
+const mapStateToProps = state => {
     return {
-        contacts: contacts
+        contacts: getContacts(state),
+        currentContact: getCurrentContact(state),
     }
 };
 
