@@ -1,24 +1,21 @@
 import React from "react";
 import './ChatRow.scss';
 
+
 const ChatRow = ({message, messageToMe, date, time}) => {
 
-    return <div className={messageToMe ? 'chat-row-to-me' : 'chat-row'}>
+    return <div className={'chat-row'}>
         {
             messageToMe ?
-                <div>
-                    <div className={'chat-row--to-me'}> {message}</div>
-                    <div className={'date-time'}>{date},      {time}</div>
+                <div className='chat-row__to-me'>
+                    <p className={'message'}> {message}</p>
+                    <span className={'date-time'}>{date}, {time}</span>
                 </div>
                 :
-
-                    <div>
-                        <div className={'chat-row--from-me'}>{message}</div>
-                        <div className={'date-time'}>{date},      {time}</div>
-                    </div>
-
-
-
+                <div className='chat-row__from-me'>
+                    <p className={'message'}>{message}</p>
+                    <span className={'date-time'}>{date}, {time}</span>
+                </div>
         }
     </div>
 }

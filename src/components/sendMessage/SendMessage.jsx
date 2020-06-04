@@ -12,7 +12,6 @@ const SendMessage = ({contactToUpdate = '', className, contacts}) => {
     const currentTime = date.getHours() + ':' + date.getMinutes();
 
     const ifEnter = (msg) => {
-
         const contactToRender = contacts.find(contact => contact.id === contactToUpdate.id);
         const message = {
             messageToMe: false,
@@ -28,21 +27,24 @@ const SendMessage = ({contactToUpdate = '', className, contacts}) => {
             messages: [...contactToRender.messages, message]
         }
         dispatch(updateMessagesHistory(objectToUpdate));
-    }
+    };
 
     const clickHandler = (e) => {
-        e.keyCode === 13 && ifEnter(e.target.value, true);
+        if(e.keyCode === 13){
+            ifEnter(e.target.value);
+            e.target.value = '';
+        }
     }
 
     return <div className={'send-message'}
                 onKeyUp={clickHandler}>
-        <div className={'sendMessage-input' + className}>
+        <div className={'send-message__input' + className}>
             <Input
-                className={'sendMessage-input' + className}
+                className={'send-message__input' + className}
                 placeHolder={'Type your message'}
+                show = {true}
             />
-            <SendIcon className={'sendIcon'}
-            />
+            <SendIcon className={'send-icon'}/>
         </div>
     </div>
 }

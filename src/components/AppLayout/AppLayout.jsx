@@ -1,12 +1,13 @@
 import React from 'react';
-import ChatContainer from "../chatContainer/ChatWrapper";
+import ChatWrapper from "../../components/chatWrapper/ChatWrapper";
 import LeftBarContainer from "../leftBar/LeftBarContainer";
 
+import './AppLayout.scss'
 
 const AppLayout = () => {
     return <div className={'chat'}>
         <LeftBarContainer/>
-        <ChatContainer/>
+        <ChatWrapper/>
     </div>
 };
 

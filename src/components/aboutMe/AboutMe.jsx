@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Avatar } from '@material-ui/core';
 import './AboutMe.scss';
 import Input from "../input/Input";
 
@@ -8,10 +9,13 @@ class AboutMe extends Component {
     render() {
         return (
             <div className={'about-me'}>
-                <p className={'about-me--my-name'}>{this.props.fullName}</p>
+                <div className='about-me__my-name'>
+                    <Avatar className='avatar'/>
+                    <h2 className='name'>{this.props.fullName}</h2>
+                </div>
 
                 <Input
-                    className={'aboutMe-input'}
+                    className={'about-me__search-field'}
                     placeHolder={'Search or start new chat'}
                     onChangeHandler={this.props.filterContacts}/>
             </div>)

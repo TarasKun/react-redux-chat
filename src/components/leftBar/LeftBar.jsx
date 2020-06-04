@@ -7,7 +7,8 @@ const LeftBar = ({contacts, fullName}) => {
     const getFilterContacts = inputValue => {
         setFilteredContacts(contacts.filter(({fullName}) => fullName.toLowerCase().includes(inputValue)));
     }
-    return <div>
+
+    return <div className={'chat__left-bar'}>
         <AboutMe
             filterContacts={getFilterContacts}
             fullName={fullName}/>

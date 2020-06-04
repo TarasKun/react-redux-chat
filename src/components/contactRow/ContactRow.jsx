@@ -8,12 +8,6 @@ class ContactRow extends Component {
         const lastIndex = messageArray.length - 1;
         return messageArray[lastIndex].date
     }
-    getLastMessage = () => {
-        const messageArray = this.props.contact.messages
-        const lastIndex = messageArray.length - 1;
-        return messageArray[lastIndex].value;
-    }
-
 
     render() {
         return (
@@ -21,14 +15,17 @@ class ContactRow extends Component {
                  onClick={() => {
                      this.props.setContactToHeaderRender(this.props.contact.id);
                  }}>
-                <Avatar src={require("../../image/1.jpg")} />
-                <div>{this.props.contact.fullName}</div>
-                <div>{this.getDate()}</div>
-                <div>{this.getLastMessage()}</div>
+                <Avatar src={require(`../../image/${this.props.contact.id}.jpg`)} />
+                <div className='contact-row__info'>
+                    <div className='name'>{this.props.contact.fullName}</div>
+                    <div className='last-message'>
+                        <span className='last-message__content'>{this.props.contact.messages[this.props.contact.messages.length - 1].value}</span>
+                        <span className='last-message__date'>{this.getDate()}</span>
+                    </div>
+                </div>
             </div>
         )
     }
 }
 
 export default ContactRow;
-

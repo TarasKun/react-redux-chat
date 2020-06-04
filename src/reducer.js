@@ -17,7 +17,8 @@ const initialState = {
                     id: 2,
                     date: '27/05/2020',
                     time: '22:28',
-                    value: 'Hi, Josephina!'
+                    value: 'Hi, Josephina!',
+                    // fromApi: true
                 }
             ]
         },
@@ -30,14 +31,15 @@ const initialState = {
                     id: 1,
                     date: '23/03/2020',
                     time: '22:27',
-                    value: 'How you doing?!'
+                    value: 'Make America Great Again!'
                 },
                 {
                     messageToMe: false,
                     id: 2,
                     date: '5/05/2020',
                     time: '22:28',
-                    value: 'Good!'
+                    value: 'no',
+                    // fromApi: true
                 }
             ]
         },
@@ -57,7 +59,8 @@ const initialState = {
                     id: 2,
                     date: '24/05/2020',
                     time: '22:28',
-                    value: 'yeah, why not'
+                    value: 'yeah, why not',
+                    // fromApi: true
                 }
             ]
         },
@@ -77,7 +80,8 @@ const initialState = {
                     id: 2,
                     date: '23/05/2020',
                     time: '22:28',
-                    value: 'perfect'
+                    value: 'perfect',
+                    // fromApi: true
                 }
             ]
         },
@@ -97,7 +101,8 @@ const initialState = {
                     id: 2,
                     date: '15/05/2020',
                     time: '22:28',
-                    value: 'okay'
+                    value: 'okay',
+                    // fromApi: true
                 }
             ]
         }],

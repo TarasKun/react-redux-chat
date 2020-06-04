@@ -1,5 +1,5 @@
 import React from "react";
-import './ChatWropper.scss';
+import './ChatWrapper.scss';
 import ChatHeader from "../chatHeader/ChatHeader";
 import SendMessageContainer from "../sendMessage/SendMessageContainer";
 import {connect} from "react-redux";
@@ -9,9 +9,10 @@ import ChatMainContainer from "../chatMain/ChatMainContainer";
 const ChatWrapper = ({contacts, currentContact=''}) => {
     const contactToRender = contacts.find(contact => contact.id === currentContact);
 
-    return <div className={'chat-container'}>
+    return <div className={'chat__chatting-container'}>
         <ChatHeader
             fullName={contactToRender && contactToRender.fullName}
+            photoNumber={contactToRender && contactToRender.id}
         />
         <ChatMainContainer
             contactToUpdate={contactToRender}
@@ -20,11 +21,11 @@ const ChatWrapper = ({contacts, currentContact=''}) => {
         {currentContact ?
             <SendMessageContainer
                 contactToUpdate={contactToRender}
-            className ={'--active'}/> :
+                className ={'_active'}/> :
             <SendMessageContainer
                 contactToUpdate={contactToRender}
-                className={'--stand-by'}
-        />}
+                className={'_stand-by'}
+            />}
     </div>
 }
 

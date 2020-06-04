@@ -1,26 +1,15 @@
 .contact-container {
-  position: absolute;
   background: #ffffff;
-  width: 33%;
-  height: 80%;
-  top: 20%;
   border: solid 1px #e8e8e8;
   flex-direction: column;
   justify-content: space-around;
+  height: 100%;
 
-  &--div{
-    position: absolute;
-    padding-top: 13%;
-    top: 6%;
-    height: 75%;
+
+  &__title {
+    margin: 10px;
+    color: darken(deepskyblue, 5%);
+    font-weight: normal;
+    font-size: 1.5em;
   }
-}
-
-p {
-  position: absolute;
-  padding-bottom: 10%;
-  top: 4%;
-  left: 3%;
-  color: #509ab3;
-  font-size: 23px;
 }

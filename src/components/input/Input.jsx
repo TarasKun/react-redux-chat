@@ -3,17 +3,18 @@ import './Input.scss';
 import SearchIcon from '@material-ui/icons/Search';
 
 
-const Input = ({className, placeHolder, onChangeHandler = () => {}, searchIconClass}) => {
+const Input = ({className, placeHolder, onChangeHandler = () => {}, searchIconClass, show}) => {
 
     return <div
         className={className}>
-        <SearchIcon className={className + '--searchIcon'}/>
+        {!show && <SearchIcon className={className + '__search-icon'}/>}
         <input type="input"
-               className={className + '--input'}
+               className={className + '__input input'}
                placeholder={placeHolder}
-               onChange={e => onChangeHandler(e.target.value)}
+               onChange={e => onChangeHandler(e.target.value.toLowerCase())}
         />
     </div>
 }
 
 export default Input;
+

@@ -1,26 +1,8 @@
-.aboutMe-input {
-  border: 2px solid #f4f4f4;
-  width: 25%;
-  height: 5%;
-  position: absolute;
-  top: 13%;
-  left: 3%;
-  border-radius: 30px;
+.input {
+  border: none;
+  width: 100%;
   background: #fafafa;
-  &--sendIcon{
-    display: none;
-  }
-  &--searchIcon{
-    margin-top: 6px;
-    opacity: 0.3;
-  }
- &--input{
-   border: none;
-   width: 93%;
-   height: 100%;
-   position: absolute;
-   border-radius: 30px;
-   background: #fafafa;
- }
+  line-height: 20px;
+  font-size: 1.1em;
 }
 

@@ -1,4 +1,4 @@
-.chat-container{
+.chat-container {
   width: 67%;
   height: 100%;
   position: absolute;
@@ -6,3 +6,5 @@
   border: solid 1px #e8e8e8;
   font-size: 25px;
 }
+
+/*# sourceMappingURL=ChatWrapper.css.map */
