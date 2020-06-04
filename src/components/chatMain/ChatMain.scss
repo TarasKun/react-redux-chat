@@ -1,8 +1,9 @@
 .chat-main {
   flex: 1;
   background: #fafafa;
-  overflow-y: scroll;
-  overflow-x: hidden;
   padding: 10px;
   max-width: calc(100vw - 30vw);
+  height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
