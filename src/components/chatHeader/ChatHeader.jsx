@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import './ChatHeader.scss';
-import Avatar from "@material-ui/core/Avatar";
+import Avatar from '@material-ui/core/Avatar';
 
 
 const ChatHeader = ({fullName,photoNumber}) => {

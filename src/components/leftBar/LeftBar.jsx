@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import ContactContainer from "../contactContainer/ContactContainer";
-import AboutMe from "../aboutMe/AboutMe";
+import React, {useState} from 'react';
+import ContactContainer from '../contactContainer/ContactContainer';
+import AboutMe from '../aboutMe/AboutMe';
 
 const LeftBar = ({contacts, fullName}) => {
     const [filteredContacts, setFilteredContacts] = useState(contacts);

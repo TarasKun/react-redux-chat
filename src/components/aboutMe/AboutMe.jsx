@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import { Avatar } from '@material-ui/core';
 import './AboutMe.scss';
-import Input from "../input/Input";
+import Input from '../input/Input';
 
 
 class AboutMe extends Component {

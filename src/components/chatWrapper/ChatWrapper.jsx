@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import './ChatWrapper.scss';
-import ChatHeader from "../chatHeader/ChatHeader";
-import SendMessageContainer from "../sendMessage/SendMessageContainer";
-import {connect} from "react-redux";
-import ChatMainContainer from "../chatMain/ChatMainContainer";
+import ChatHeader from '../chatHeader/ChatHeader';
+import SendMessageContainer from '../sendMessage/SendMessageContainer';
+import {connect} from 'react-redux';
+import ChatMainContainer from '../chatMain/ChatMainContainer';
 
 
 const ChatWrapper = ({contacts, currentContact=''}) => {

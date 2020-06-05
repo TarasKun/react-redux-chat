@@ -1,3 +1,5 @@
+import *as constants from '../src/constants'
+
 const initialState = {
     fullName: 'Taras Kunyk',
     contacts: [
@@ -111,22 +113,22 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'SET_CONTACT_NAME':
+        case constants.SET_CONTACT_NAME:
             return {
                 ...state,
                 contacts: [...state.contacts, action.contact]
             };
-        case 'SET_CONTACT_TO_HEADER_RENDER':
+        case constants.SET_CONTACT_TO_HEADER_RENDER:
             return {
                 ...state,
                 currentContact: action.id
             }
-        case 'SET_MESSAGE_TO_MESSAGE_HISTORY':
+        case constants.SET_MESSAGE_TO_MESSAGE_HISTORY:
             return {
                 ...state,
                 contacts: [...state.contacts.map(contact => contact.id !== action.obj.id ? contact  : action.obj)]
             }
-        case 'SET_MESSAGE_FROM_API':
+        case constants.SET_MESSAGE_FROM_API:
             return {
                 ...state,
                 contacts: [...state.contacts.map(contact => contact.id !== action.obj.id ? contact  : action.obj)]

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import './ChatMain.scss';
-import ChatRow from "../chatRow/ChatRow";
+import ChatRow from '../chatRow/ChatRow';
 import { joke } from '../../ChuckNorrisClient'
 import scrollToElement from './chatUtils';
 

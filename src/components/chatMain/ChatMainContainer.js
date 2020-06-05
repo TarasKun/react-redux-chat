@@ -1,5 +1,5 @@
-import {connect} from "react-redux";
-import ChatMain from "./ChatMain";
+import {connect} from 'react-redux';
+import ChatMain from './ChatMain';
 import {getContacts} from '../../selectors';
 import {updateMessagesHistoryWithApiResult} from '../../actions';
 

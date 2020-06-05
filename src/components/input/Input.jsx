@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import './Input.scss';
 import SearchIcon from '@material-ui/icons/Search';
 
 
-const Input = ({className, placeHolder, onChangeHandler = () => {}, searchIconClass, show}) => {
+const Input = ({className, placeHolder, onChangeHandler = () => {},show}) => {
 
     return <div
         className={className}>

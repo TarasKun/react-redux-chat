@@ -1,5 +1,5 @@
-import {connect} from "react-redux";
-import SendMessage from "./SendMessage";
+import {connect} from 'react-redux';
+import SendMessage from './SendMessage';
 import { getContacts } from '../../selectors';
 
 const mapStateToProps = state => {

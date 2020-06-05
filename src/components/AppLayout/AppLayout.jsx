@@ -1,6 +1,6 @@
 import React from 'react';
-import ChatWrapper from "../../components/chatWrapper/ChatWrapper";
-import LeftBarContainer from "../leftBar/LeftBarContainer";
+import ChatWrapper from '../../components/chatWrapper/ChatWrapper';
+import LeftBarContainer from '../leftBar/LeftBarContainer';
 
 import './AppLayout.scss'
 

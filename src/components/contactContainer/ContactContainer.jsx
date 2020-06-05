@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import './ContactContainer.scss';
-import SetContactToHeader from "../contactRow/setContactToHeader";
+import SetContactToHeader from '../contactRow/setContactToHeader';
 
 
 const ContactContainer = ({contacts}) => {

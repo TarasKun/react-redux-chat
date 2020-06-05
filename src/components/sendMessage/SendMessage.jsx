@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import './SendMessage.scss';
-import Input from "../input/Input";
+import Input from '../input/Input';
 import {useDispatch} from 'react-redux';
 import {updateMessagesHistory} from '../../actions'
 import SendIcon from '@material-ui/icons/Send';
@@ -29,9 +29,11 @@ const SendMessage = ({contactToUpdate = '', className, contacts}) => {
         dispatch(updateMessagesHistory(objectToUpdate));
     };
 
+    const messageIsEmpty = msg => msg.split('').some(item => item !== ' ') ;
+
     const clickHandler = (e) => {
-        if(e.keyCode === 13){
-            ifEnter(e.target.value);
+        if (e.keyCode === 13) {
+            messageIsEmpty(e.target.value) && ifEnter(e.target.value);
             e.target.value = '';
         }
     }
@@ -42,7 +44,7 @@ const SendMessage = ({contactToUpdate = '', className, contacts}) => {
             <Input
                 className={'send-message__input' + className}
                 placeHolder={'Type your message'}
-                show = {true}
+                show={true}
             />
             <SendIcon className={'send-icon'}/>
         </div>
