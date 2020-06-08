@@ -21,13 +21,22 @@ class Input extends Component {
                 onChange={e => onChangeHandler(e.target.value.toLowerCase())}
                 ref={ref => this.input = ref}
             />
-            <div>
-                <SendIcon
-                    type={'submit'}
-                    className={'send-icon'}
-                    onClick={button2Click}
-                />
-            </div>
+            {className === 'about-me__search-field' ?
+                <div className={'sendIconNone'}>
+                    <SendIcon
+                        type={'submit'}
+                        className={'send-icon'}
+                        onClick={button2Click}
+                    />
+                </div> :
+                <div>
+                    <SendIcon
+                        type={'submit'}
+                        className={'send-icon'}
+                        onClick={button2Click}
+                    />
+                </div>
+            }
         </div>)
     }
 }
