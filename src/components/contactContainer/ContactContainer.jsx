@@ -6,7 +6,7 @@ import SetContactToHeader from '../contactRow/setContactToHeader';
 const ContactContainer = ({contacts}) => {
 
     return (
-        <div className={'contact-container'}>
+        <div data-testid={'contact-container'} className={'contact-container'}>
             <h3 className={'contact-container__title'}>Chats</h3>
             <div className={'contact-container__contacts'}>
                 {

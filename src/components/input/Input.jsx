@@ -5,7 +5,10 @@ import SendIcon from "@material-ui/icons/Send";
 
 class Input extends Component {
     render() {
-        const { className, placeHolder, onChangeHandler = () => {}, show, sendMessage } = this.props;
+        const {
+            className, placeHolder, onChangeHandler = () => {
+            }, show, sendMessage
+        } = this.props;
         const button2Click = () => {
             sendMessage(this.input.value);
             this.input.value = '';
@@ -13,7 +16,7 @@ class Input extends Component {
 
         return (<div
             className={className}>
-            {!show && <SearchIcon className={className + '__search-icon'}/>}
+            {!show && <SearchIcon data-testid={'search-icon'} className={className + '__search-icon'}/>}
             <input
                 type="input"
                 className={className + '__input input'}
@@ -21,22 +24,14 @@ class Input extends Component {
                 onChange={e => onChangeHandler(e.target.value.toLowerCase())}
                 ref={ref => this.input = ref}
             />
-            {className === 'about-me__search-field' ?
-                <div className={'sendIconNone'}>
-                    <SendIcon
-                        type={'submit'}
-                        className={'send-icon'}
-                        onClick={button2Click}
-                    />
-                </div> :
-                <div>
-                    <SendIcon
-                        type={'submit'}
-                        className={'send-icon'}
-                        onClick={button2Click}
-                    />
-                </div>
-            }
+            <div className={className === 'about-me__search-field' ? 'sendIconNone' : 'send-icon'}>
+                <SendIcon
+                    data-testid={'send-icon'}
+                    type={'submit'}
+                    className={'send-icon'}
+                    onClick={button2Click}
+                />
+            </div>
         </div>)
     }
 }

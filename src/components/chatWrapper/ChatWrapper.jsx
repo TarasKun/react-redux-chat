@@ -5,27 +5,22 @@ import SendMessageContainer from '../sendMessage/SendMessageContainer';
 import {connect} from 'react-redux';
 import ChatMainContainer from '../chatMain/ChatMainContainer';
 
-
-const ChatWrapper = ({contacts, currentContact=''}) => {
+const ChatWrapper = ({contacts, currentContact = ''}) => {
     const contactToRender = contacts.find(contact => contact.id === currentContact);
 
     return <div className={'chat__chatting-container'}>
         <ChatHeader
-            fullName={contactToRender && contactToRender.fullName}
-            photoNumber={contactToRender && contactToRender.id}
+            fullName={contactToRender?.fullName}
+            photoNumber={contactToRender?.id}
         />
         <ChatMainContainer
             contactToUpdate={contactToRender}
-            messages={contactToRender && contactToRender.messages}
+            messages={contactToRender?.messages}
         />
-        {currentContact ?
-            <SendMessageContainer
-                contactToUpdate={contactToRender}
-                className ={'_active'}/> :
-            <SendMessageContainer
-                contactToUpdate={contactToRender}
-                className={'_stand-by'}
-            />}
+        <SendMessageContainer
+            contactToUpdate={contactToRender}
+            className={currentContact ? '_active' : '_stand-by'}
+        />
     </div>
 }
 

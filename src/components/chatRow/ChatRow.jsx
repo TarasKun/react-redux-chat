@@ -3,20 +3,13 @@ import './ChatRow.scss';
 
 
 const ChatRow = ({message, messageToMe, date, time, reference}) => {
+    const messageClass = messageToMe ? 'chat-row__to-me' : 'chat-row__from-me';
 
-    return <div className={'chat-row'}>
-        {
-            messageToMe ?
-                <div className='chat-row__to-me' ref={reference}>
-                    <p className={'message'}> {message}</p>
-                    <span className={'date-time'}>{date}, {time}</span>
-                </div>
-                :
-                <div className='chat-row__from-me' ref={reference}>
-                    <p className={'message'}>{message}</p>
-                    <span className={'date-time'}>{date}, {time}</span>
-                </div>
-        }
+    return <div className={'chat-row'} data-testid={'chat-row'}>
+        <div className={messageClass} data-testid={'message-container'} ref={reference}>
+            <p className={'message'}>{message}</p>
+            <span className={'date-time'}>{date}, {time}</span>
+        </div>
     </div>
 }
 

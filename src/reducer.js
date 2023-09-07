@@ -1,6 +1,6 @@
 import *as constants from '../src/constants'
 
-const initialState = {
+export const initialState = {
     fullName: 'Taras Kunyk',
     contacts: [
         {
@@ -26,35 +26,35 @@ const initialState = {
         },
         {
             id: 2,
-            fullName: 'Donald Trump',
+            fullName: 'Joe Biden',
             messages: [
                 {
                     messageToMe: true,
                     id: 1,
                     date: '23/03/2020',
                     time: '22:27',
-                    value: 'Make America Great Again!'
+                    value: 'How can I help?'
                 },
                 {
                     messageToMe: false,
                     id: 2,
                     date: '5/05/2020',
                     time: '22:28',
-                    value: 'no',
+                    value: 'Guns',
                     // fromApi: true
                 }
             ]
         },
         {
             id: 3,
-            fullName: 'Elon Musk',
+            fullName: 'Tim Cook',
             messages: [
                 {
                     messageToMe: true,
                     id: 1,
                     date: '13/04/2020',
                     time: '22:27',
-                    value: 'Do you want new Tesla?'
+                    value: 'Do you want new MacBook?'
                 },
                 {
                     messageToMe: false,
@@ -134,7 +134,7 @@ export const reducer = (state = initialState, action) => {
                 contacts: [...state.contacts.map(contact => contact.id !== action.obj.id ? contact  : action.obj)]
             }
 
-        default: 
+        default:
             return state;
     }
 };

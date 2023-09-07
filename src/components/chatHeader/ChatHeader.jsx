@@ -4,9 +4,9 @@ import Avatar from '@material-ui/core/Avatar';
 
 
 const ChatHeader = ({fullName,photoNumber}) => {
-    return <div className={'chat-header-wrapper'}>
+    return <div className={'chat-header-wrapper'} data-testid='ChatHeader'>
         {fullName &&  <div  className={'chat-header'}>
-            <Avatar src={require(`../../image/${photoNumber}.jpg`)}/>
+            <Avatar data-testid={'avatar'} src={require(`../../image/${photoNumber}.jpg`)}/>
             <span className={'chat-header__name'}>{fullName} </span>
         </div>}
     </div>

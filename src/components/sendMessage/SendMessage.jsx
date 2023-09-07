@@ -13,7 +13,6 @@ class SendMessage extends Component {
 
 
         const sendMessage = (msg) => {
-            console.log('go');
             const contactToRender = contacts.find(contact => contact.id === contactToUpdate.id);
             const message = {
                 messageToMe: false,
@@ -39,9 +38,9 @@ class SendMessage extends Component {
             }
         }
         return (
-            <div className={'send-message'}
+            <div data-testid='sendMessageContainer' className={'send-message'}
                  onKeyUp={e => clickHandler(e)}>
-                <div className={'send-message__input' + className}>
+                <div data-testid='sendMessageInput' className={'send-message__input' + className}>
                     <Input
                         className={'send-message__input' + className}
                         placeHolder={'Type your message'}

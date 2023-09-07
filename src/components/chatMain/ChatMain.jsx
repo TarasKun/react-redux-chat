@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ChatMain.scss';
 import ChatRow from '../chatRow/ChatRow';
 import { joke } from '../../ChuckNorrisClient'
-import scrollToElement from './chatUtils';
+import utils from './chatUtils';
 
 class ChatMain extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class ChatMain extends Component {
     componentDidUpdate({ contactToUpdate: prevContactToUpdate, messages: prevMessages }) {
         const { messages, contacts, updateMessagesHistoryWithApiResult, contactToUpdate } = this.props;
 
-        this.myRef.current !== null && scrollToElement(this.myRef);
+        this.myRef.current !== null && utils.scrollToElement(this.myRef);
 
         if(prevContactToUpdate !== undefined && prevContactToUpdate.fullName !== contactToUpdate.fullName) return;
 
@@ -26,7 +26,7 @@ class ChatMain extends Component {
     render() {
         const {messages = []} = this.props;
         return (
-            <div className={'chat-main'} ref={this.chat}>
+            <div data-testid={'chat-main'} className={'chat-main'} ref={this.chat}>
                 {
                     messages.map(message =>
                             <ChatRow

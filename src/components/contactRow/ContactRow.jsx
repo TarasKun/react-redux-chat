@@ -4,7 +4,7 @@ import { Avatar } from '@material-ui/core';
 
 class ContactRow extends Component {
     state = {
-        lastMessageValue: this.props.contact.messages[this.props.contact.messages.length - 1].value
+        lastMessageValue: this.props.contact.messages[this.props.contact.messages?.length - 1].value
     }
 
     componentDidUpdate(prevProps) {
@@ -31,7 +31,7 @@ class ContactRow extends Component {
 
     render() {
         return (
-            <div className={'contact-row'}
+            <div data-testid={'contact-row'} className={'contact-row'}
                  onClick={() => {
                      this.props.setContactToHeaderRender(this.props.contact.id);
                  }}>

@@ -8,7 +8,7 @@ class AboutMe extends Component {
 
     render() {
         return (
-            <div className={'about-me'}>
+            <div data-testid={'about-me'} className={'about-me'}>
                 <div className='about-me__my-name'>
                     <Avatar className='avatar'/>
                     <h2 className='name'>{this.props.fullName}</h2>
