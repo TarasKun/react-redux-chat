@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import ChatMain from './ChatMain';
-import {getContacts} from '../../selectors';
-import {updateMessagesHistoryWithApiResult} from '../../actions';
+import {getContacts} from '../../store/selectors';
+import {updateMessagesHistoryWithApiResult} from '../../store/actions';
 
 const mapStateToProps = state => {
     return {

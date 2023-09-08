@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import SendMessage from './SendMessage';
-import { getContacts } from '../../selectors';
-import { updateMessagesHistory } from "../../actions";
+import { getContacts } from '../../store/selectors';
+import { updateMessagesHistory } from "../../store/actions";
 
 const mapStateToProps = state => {
     return {

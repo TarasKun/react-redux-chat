@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import {setContactToHeaderRender} from '../../actions'
+import {setContactToHeaderRender} from '../../store/actions'
 import ContactRow from './ContactRow';
-import {getContacts, getCurrentContact} from '../../selectors';
+import {getContacts, getCurrentContact} from '../../store/selectors';
 
 const mapStateToProps = state => {
     return {

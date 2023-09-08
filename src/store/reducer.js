@@ -1,4 +1,4 @@
-import *as constants from '../src/constants'
+import *as constants from '../constants'
 
 export const initialState = {
     fullName: 'Taras Kunyk',

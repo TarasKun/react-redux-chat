@@ -5,7 +5,7 @@ import LeftBarContainer from '../leftBar/LeftBarContainer';
 import './AppLayout.scss'
 
 const AppLayout = () => {
-    return <div className={'chat'}>
+    return <div data-testid='chat' className={'chat'}>
         <LeftBarContainer/>
         <ChatWrapper/>
     </div>

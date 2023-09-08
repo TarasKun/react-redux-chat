@@ -1,5 +1,5 @@
 import { reducer, initialState } from './reducer';
-import * as constants from '../src/constants';
+import * as constants from '../constants';
 
 describe('Reducer Tests', () => {
     it('should return the initial state', () => {

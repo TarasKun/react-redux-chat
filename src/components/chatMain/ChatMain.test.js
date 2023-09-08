@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from '@testing-library/react';
 import ChatMain from './ChatMain';
-import {initialState} from "../../reducer";
+import {initialState} from "../../store/reducer";
 import utils from "./chatUtils";
 
 describe('ChatMain component test', () => {
@@ -63,4 +63,23 @@ describe('ChatMain component test', () => {
 
         expect(scrollSpy).toHaveBeenCalledTimes(1);
     });
+
+    test('should destructure props correctly', () => {
+        const {contacts} = initialState;
+        const prevContactToUpdate = contacts[1];
+        const prevMessages = prevContactToUpdate.messages;
+        const updateMessagesHistoryWithApiResult = jest.fn();
+
+        const { container } = render(
+            <ChatMain
+                messages={prevMessages}
+                contacts={contacts}
+                contactToUpdate={prevContactToUpdate}
+                updateMessagesHistoryWithApiResult={updateMessagesHistoryWithApiResult}
+            />
+        );
+
+        const messageElement = container.querySelector('.message');
+        expect(messageElement).toBeInTheDocument();
+    })
 })

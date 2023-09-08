@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
 import LeftBar from './LeftBar';
 import configureStore from "redux-mock-store";
-import {initialState} from "../../reducer";
+import {initialState} from "../../store/reducer";
 import {Provider} from "react-redux";
 
 const mockStore = configureStore()
